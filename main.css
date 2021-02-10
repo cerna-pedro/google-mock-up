@@ -45,7 +45,8 @@ table {
 }
 
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 a {
@@ -55,35 +56,52 @@ a {
 
 /* Custom CSS */
 
-
-
 body {
     font-family: Arial, Helvetica, sans-serif;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 100vh;
     min-width: 570px;
+    background-color: rgb(255, 255, 255);
 }
 
 main{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex: 1 0 auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
 }
 
 .menu-section{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     font-size: 13px;
 }
 
-
 .menu-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 3rem;
     padding:1rem
-
 }
 
 .item {
@@ -106,39 +124,52 @@ main{
     height:30px;
 }
 
-
 svg {
     width:20px;
     height:20px;
 }
 
-
-
-
 .center-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    flex:.5;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-flex:.5;
+        -ms-flex:.5;
+            flex:.5;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .search-container {
     margin: 2rem 0;
     width: 480px;
     height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border: 1px solid rgb(223,225,229);
     padding: .2rem 1rem;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     border-radius: 25px;
     gap: 1rem;
-
 }
 
 .search-container:hover {
-    box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+    -webkit-box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+            box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 }
 
 .microphone,.magnifying {
@@ -146,12 +177,18 @@ svg {
 }
 
 .search {
-flex:1;
+-webkit-box-flex:1;
+    -ms-flex:1;
+        flex:1;
+display: -webkit-box;
+display: -ms-flexbox;
 display: flex;
 }
 
 input {
-    flex:1;
+    -webkit-box-flex:1;
+        -ms-flex:1;
+            flex:1;
     border: none;
 }
 
@@ -159,21 +196,26 @@ input:focus{
     outline: none;
 }
 
-
 button:hover {
     cursor: pointer;
 }
 
 .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 1rem;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: .1rem;
 }
 
 button{
     font-family: inherit;
     font-size: 14px;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(#f5f5f5),to(#f1f1f1));
+    background-image: -o-linear-gradient(top,#f5f5f5,#f1f1f1);
     background-image: linear-gradient(top,#f5f5f5,#f1f1f1);
     border:1px solid transparent;
     padding: 10px;
@@ -183,7 +225,8 @@ button{
 
 button:hover {
     border: 1px solid #c6c6c6;
-    box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+    -webkit-box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+            box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
 }
 
 footer{
