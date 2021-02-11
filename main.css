@@ -56,6 +56,11 @@ a {
 
 /* Custom CSS */
 
+html {
+    height: 100%;
+    height: -webkit-fill-available;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     display: -webkit-box;
@@ -63,11 +68,18 @@ body {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     min-width: 570px;
     background-color: rgb(255, 255, 255);
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
 }
 
 main{
@@ -230,6 +242,29 @@ button:hover {
 }
 
 footer{
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
     background-color: #f2f2f2;
     color:#5f6368;
 }
+
+@media (max-width: 570px) {
+    body{
+        min-width: 0;
+    }
+    .menu-section{
+        -webkit-box-pack: space-evenly;
+            -ms-flex-pack: space-evenly;
+                justify-content: space-evenly;
+    }
+    .search-container{
+        width:90%
+    }
+    footer{
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+    }
+ }
